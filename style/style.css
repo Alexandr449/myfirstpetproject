@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Play:wght@400;700&family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --main-color:#A7C957;
+    --secondary-color:#F2E8CF;
+    --other-color: #BC4749;
+    --main-font:"Rubik Dirt", serif;
+    --secondary-font:"Play", serif;
+    --third-font:"Roboto", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+body{
+    background-color: orange;
+    
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   
+  
+  
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 70px;
+    font-family: var(--secondary-font);
+}
+
+.logo{
+    color: white;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 24px;
+    width: 70px;
+    height: 70px;
+overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+position: relative;
+}
+
+
+.logo img{
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+nav{
+    display: flex;
+    gap: 30px;
+    font-family: var(--main-font);
+}
+
+.menu_2{
+    display: none;
+}
+
+button{
+    
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: var(--third-font);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        background-image: linear-gradient(to right, #ff9966, #ff5e62); 
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+      }
+      
+      
+      button:hover {
+          transform: translateY(-2px); 
+          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); 
+      }
+      
+      button:active {
+          transform: translateY(0); 
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+      }
+
+      
+  
+    
+    .menu {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .menu-item {
+      width: 200px; 
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+        overflow: hidden; 
+    
+    
+    }
+    
+    
+    .menu-item:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    
+    
+    }
+    
+    
+    .menu-item img {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    
+    }
+
+    .mobile_menu{
+        display: none;
+        justify-content: center;
+        position:fixed;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(50px);
+        flex-direction: column;
+    }
+    
+    .mobile_menu a{
+        text-decoration: none;
+        color: white;
+        font-family: Arial;
+    }
+    
+    .menu-item h3 {
+      margin: 0 0 10px;
+    
+    
+    }
+    
+    .order-button {
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; 
+    
+    
+    
+    }
+    
+    .order-button:hover {
+        background-color: #3e8e41; 
+    
+    
+    }
+
+    .nav_link{
+        color: #3e8e41;
+    }
+
+    @media screen and (max-width:431px){
+    .nav_link{
+        display: none;
+    }
+    
+    body{
+        flex-direction: column;
+    }
+     .menu_2{
+        display: block;
+     }
+        .menu{
+            width: 499px;
+        }
+     
+    } 
+    @media screen and (max-width:1281){
+        .menu_2{
+            display: none;
+        }
+
+        
+    }
+
+    @media screen and (max-width:391){
+        .menu{
+        display: flex;
+        }
+    }
+ 
+
+    @keyframes slideDown{
+        0%{
+            transform: translateY(-40px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
